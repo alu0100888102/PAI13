@@ -21,16 +21,11 @@ import modelo.*;
 public class Battlefield extends JPanel {
 	public static final int VIRTUAL_HEIGHT = 600;
 	public static final int VIRTUAL_WIDTH = 1200;
-	private int widthConstant;
-	private int heightConstant;
 	private ArrayList<Bola> bolas;
 	private Bola proyectil;
 	private Cannon cannon;
-	private JButton info;
 	
 	public Battlefield(){
-		setWidthConstant(0);
-		setHeightConstant(0);
 		setCannon(new Cannon(VIRTUAL_WIDTH/2, 0));
 		setProyectil(getCannon().getBola());
 		generateLevel();
@@ -47,26 +42,6 @@ public class Battlefield extends JPanel {
 		setBolas(temp);
 	}
 	
-	public JButton getInfo() {
-		return info;
-	}
-
-	public void setInfo(JButton info) {
-		this.info = info;
-	}
-
-	public int getWidthConstant() {
-		return widthConstant;
-	}
-	public void setWidthConstant(int widthConstant) {
-		this.widthConstant = widthConstant;
-	}
-	public int getHeightConstant() {
-		return heightConstant;
-	}
-	public void setHeightConstant(int heightConstant) {
-		this.heightConstant = heightConstant;
-	}
 	public ArrayList<Bola> getBolas() {
 		return bolas;
 	}
